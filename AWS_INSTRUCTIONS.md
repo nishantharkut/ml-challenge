@@ -53,14 +53,14 @@ ssh -i "$env:USERPROFILE\.ssh\amazon-ml-key.pem" ubuntu@<PUBLIC_IP>
 Once connected to the EC2 instance, copy and paste this entire block into the terminal:
 
 ```bash
-# 1. Update and install dependencies
-sudo apt-get update && sudo apt-get install -y python3-pip python3-venv git htop
+# 1. Update and install dependencies (including unzip)
+sudo apt-get update && sudo apt-get install -y python3-pip python3-venv git htop unzip
 
 # 2. Create virtual environment
 python3 -m venv ~/ml-venv
 source ~/ml-venv/bin/activate
 pip install --upgrade pip
-pip install rapidfuzz sparse_dot_topn lightgbm polars anyascii psutil scipy scikit-learn
+pip install rapidfuzz sparse_dot_topn lightgbm polars anyascii psutil scipy scikit-learn joblib
 
 # 3. Create project structure
 mkdir -p ~/amazon_ml/dataset/test
@@ -84,11 +84,9 @@ $IP = "<PUBLIC_IP>"
 scp -i $KEY "C:\N Drive\Amazon ML Challenge\ec2_bundle.zip" ubuntu@${IP}:~/amazon_ml/
 ssh -i $KEY ubuntu@${IP} "unzip -o ~/amazon_ml/ec2_bundle.zip -d ~/amazon_ml/ && rm ~/amazon_ml/ec2_bundle.zip"
 
-
-# 2. Sync compressed test dataset (test_data.zip)
+# 2. Sync compressed test dataset (488 MB test_data.zip)
 scp -i $KEY "C:\N Drive\Amazon ML Challenge\test_data.zip" ubuntu@${IP}:~/amazon_ml/
 ssh -i $KEY ubuntu@${IP} "unzip -o ~/amazon_ml/test_data.zip -d ~/amazon_ml/ && rm ~/amazon_ml/test_data.zip"
-
 ```
 
 ---
@@ -101,15 +99,19 @@ On the EC2 instance terminal:
 cd ~/amazon_ml
 source ~/ml-venv/bin/activate
 
-export AMAZON_ML_DATASET_DIR=~/amazon_ml/dataset
-export AMAZON_ML_RUNS_DIR=~/amazon_ml/Implementation/runs
-export AMAZON_ML_RUN_ID=default
+export AMAZON_ML_DATASET_DIR="$HOME/amazon_ml/dataset"
+export AMAZON_ML_RUNS_DIR="$HOME/amazon_ml/Implementation/runs"
+export AMAZON_ML_RUN_ID="default"
 
-# Run US full inference
-python -u Implementation/51_stream_country.py --country US --shard-size 25000 2>&1 | tee us_run.log
+# Launch in background with nohup (safe from SSH disconnects!)
+nohup python -u Implementation/51_stream_country.py --country US --shard-size 25000 > us_run.log 2>&1 &
+
+# View real-time progress (press Ctrl+C to exit log view anytime; the process will keep running!)
+tail -f us_run.log
 ```
 
-*Estimated completion: **~1.5 hours** on `c6i.16xlarge`.*
+*Estimated completion: **~1.5 hours** on `c6i.16xlarge` (64 cores, 128 GB RAM).*
+
 
 ---
 

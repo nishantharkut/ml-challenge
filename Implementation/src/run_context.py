@@ -29,11 +29,12 @@ class RunContext:
             raise ValueError(
                 "run_id must be 1-80 characters using letters, digits, '.', '_' or '-'"
             )
-        object.__setattr__(self, "data_root", Path(self.data_root).resolve())
+        object.__setattr__(self, "data_root", Path(self.data_root).expanduser().resolve())
         object.__setattr__(
-            self, "implementation_root", Path(self.implementation_root).resolve()
+            self, "implementation_root", Path(self.implementation_root).expanduser().resolve()
         )
-        object.__setattr__(self, "runs_root", Path(self.runs_root).resolve())
+        object.__setattr__(self, "runs_root", Path(self.runs_root).expanduser().resolve())
+
 
     @property
     def run_root(self) -> Path:
