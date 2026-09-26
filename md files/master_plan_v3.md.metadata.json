@@ -1,0 +1,6 @@
+{
+  "summary": "FINAL definitive master plan v3.0 for the Amazon ML Challenge 2026, synthesizing findings from 4 deep research subagents, actual transliteration testing on real data, dictionary mining experiments, and dataset gap analysis. Key changes from v2:\n\n1. TRANSLITERATION REDESIGN: indic-transliteration produces scholarly romanization (prAiveTa), NOT English (Private). The strategy is now: auto-mined dictionary (primary, ~60-70% coverage) + phonetic fuzzy matching on indic-translit ITRANS output (secondary) + multilingual embedding similarity (safety net).\n2. VALIDATION STRATEGY: Split at entity level, not pair level. Simulate France zero-shot by holding out India as test.\n3. NEW FEATURES: Overlap Coefficient, dual legal suffix features, product cross-features (name*addr), adversarial validation.\n4. BLOCKING FUNNEL refined: Stage 1 uses parallel S2+S3 processing per-country. Stage 2 lightweight scorer uses RapidFuzz on BOTH raw and transliterated forms.\n5. COMPLETE PIPELINE ARCHITECTURE: Full end-to-end flow from raw data to submission files.\n6. SUBMISSION STRATEGY: Diversified submissions for public/private leaderboard robustness.\n7. Full error log of ALL assumptions tested and corrected across v1→v2→v3.",
+  "updatedAt": "2026-09-25T15:06:59.988230800Z",
+  "requestFeedback": true,
+  "userFacing": true
+}

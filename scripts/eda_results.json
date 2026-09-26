@@ -1,0 +1,627 @@
+{
+  "file_stats": {
+    "train_s1": {
+      "total_rows": 2206821,
+      "country_counts": {
+        "US": 1323633,
+        "India": 883188
+      },
+      "empty_address_count": 0,
+      "empty_address_rate": 0.0
+    },
+    "train_s2": {
+      "total_rows": 5034616,
+      "country_counts": {
+        "India": 2017799,
+        "US": 3016817
+      },
+      "empty_address_count": 168967,
+      "empty_address_rate": 0.03356105013768677
+    },
+    "train_s3": {
+      "total_rows": 5285603,
+      "country_counts": {
+        "US": 3170056,
+        "India": 2115547
+      },
+      "empty_address_count": 175916,
+      "empty_address_rate": 0.033282106128666875
+    },
+    "test_s1": {
+      "total_rows": 1732544,
+      "country_counts": {
+        "US": 663106,
+        "France": 259452,
+        "India": 809986
+      },
+      "empty_address_count": 0,
+      "empty_address_rate": 0.0
+    },
+    "test_s2": {
+      "total_rows": 4887273,
+      "country_counts": {
+        "India": 2312565,
+        "France": 703378,
+        "US": 1871330
+      },
+      "empty_address_count": 129408,
+      "empty_address_rate": 0.02647856995097266
+    },
+    "test_s3": {
+      "total_rows": 5082316,
+      "country_counts": {
+        "India": 2405000,
+        "France": 731615,
+        "US": 1945701
+      },
+      "empty_address_count": 136098,
+      "empty_address_rate": 0.026778736308407425
+    }
+  },
+  "country_variants": {
+    "train_s1": {
+      "US": 1323633,
+      "India": 883188
+    },
+    "train_s2": {
+      "India": 2017799,
+      "US": 3016817
+    },
+    "train_s3": {
+      "US": 3170056,
+      "India": 2115547
+    },
+    "test_s1": {
+      "US": 663106,
+      "France": 259452,
+      "India": 809986
+    },
+    "test_s2": {
+      "India": 2312565,
+      "France": 703378,
+      "US": 1871330
+    },
+    "test_s3": {
+      "India": 2405000,
+      "France": 731615,
+      "US": 1945701
+    }
+  },
+  "ground_truth_stats": {
+    "total_s1": 2206821,
+    "singletons": 123247,
+    "singleton_share": 0.05584820880352326,
+    "non_singletons": 2083574,
+    "total_matches": 7638365,
+    "matches_per_s1_all": {
+      "p10": 1,
+      "p25": 2,
+      "p50 (median)": 3,
+      "p75": 5,
+      "p90": 6,
+      "p95": 6,
+      "p99": 8,
+      "max": 11,
+      "min": 0,
+      "mean": 3.4612526344456573
+    },
+    "matches_per_s1_non_singletons": {
+      "p10": 2,
+      "p25": 3,
+      "p50 (median)": 4,
+      "p75": 5,
+      "p90": 6,
+      "p95": 6,
+      "p99": 8,
+      "max": 11,
+      "min": 1,
+      "mean": 3.66599170463828
+    },
+    "s2_matches_per_s1": {
+      "p10": 0,
+      "p25": 1,
+      "p50 (median)": 2,
+      "p75": 2,
+      "p90": 3,
+      "p95": 4,
+      "p99": 5,
+      "max": 5,
+      "min": 0,
+      "mean": 1.673728408420982
+    },
+    "s3_matches_per_s1": {
+      "p10": 0,
+      "p25": 1,
+      "p50 (median)": 2,
+      "p75": 3,
+      "p90": 3,
+      "p95": 4,
+      "p99": 5,
+      "max": 6,
+      "min": 0,
+      "mean": 1.7875242260246753
+    },
+    "s2_ids_shared_across_s1": 0,
+    "s3_ids_shared_across_s1": 0,
+    "match_distribution": {
+      "3": 530841,
+      "4": 484115,
+      "2": 375212,
+      "5": 321957,
+      "6": 164868,
+      "0": 123247,
+      "1": 119157,
+      "7": 63968,
+      "8": 18680,
+      "9": 4205,
+      "10": 534,
+      "11": 37
+    }
+  },
+  "cross_country_gt_pairs_count": 0,
+  "cross_country_gt_pairs_sample": [],
+  "sample_15_matched_groups": [
+    {
+      "s1": {
+        "entity_id": "S1-29845983",
+        "business_name": "Hendricks and Flowers Inc",
+        "business_address": "33 Sleepy Hollow Drive, Danbury, CT",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-648035184",
+          "business_name": "Hendricks and  Flowers Inc",
+          "business_address": "CT, SLEEPY HOLLOW DRIVE, DANBURY",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-588502663",
+          "business_name": "Hendricks and Inc Flowers",
+          "business_address": "",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-343815751",
+        "business_name": "Dahlia Power Reliable Scientific LLC",
+        "business_address": "630 45th Terrace, Kansas City, MO",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-790675320",
+          "business_name": "Dahlia Power Reliable",
+          "business_address": "KANSAS CITY, MO, 630 45ND TERRACE, null",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-479876582",
+          "business_name": "Dahlia Power Reliable Scientific",
+          "business_address": "45ND TERRACE, null, KANSAS CITY, MO",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-878454467",
+          "business_name": "Dahlia Ponr Reliable Scientific LLC",
+          "business_address": "Missouri, 630 45th Terrace, Kansas City",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-18727616",
+        "business_name": "Lumay Boral",
+        "business_address": "1056 Belden Avenue, Akron, OH",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-755677256",
+          "business_name": "Lumay Boral Inc.",
+          "business_address": "1056-1060 BELDEN AVE, PO BOX 8807, AKRON, OH",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-187831601",
+          "business_name": "Lumay Bóral",
+          "business_address": "1056c Belden Ave, AKON, Ohio",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-641489370",
+          "business_name": "Lumay Boral",
+          "business_address": "1056c Belden Ave, AKON, Ohio",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-476250621",
+          "business_name": "Lumay Bóral",
+          "business_address": "1056c Belden Avenue, AKON, Ohio",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-965667",
+        "business_name": "Maure Williams Colombier Inc",
+        "business_address": "85 Wayne Avenue, Ticonderoga, NY",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-681193310",
+          "business_name": "Maure Wilblims Colombier Inc",
+          "business_address": "",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-743505751",
+          "business_name": "Maure Williams Colombier",
+          "business_address": "",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-775321672",
+          "business_name": "Dréxkor",
+          "business_address": "85 Wanye Avenue, Ticonderoga Townshiip, New York",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-11291185",
+          "business_name": "maurewilliamscolombier.com",
+          "business_address": "Wayne Ave, Ticonderoga Townshiip, New York",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-860443364",
+          "business_name": "Maure Williams Inc Center",
+          "business_address": "",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-730934468",
+        "business_name": "Orellana Investments LLC",
+        "business_address": "728 A Quail Avenue, Fl Ground Floor, Geneva, IA",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-356983532",
+          "business_name": "Orellana Investments Investments Llc",
+          "business_address": "",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-352439310",
+          "business_name": "LLC Orellana Invsmbens",
+          "business_address": "728 A Quail Avenue, Fl. Ground Floor, Geneva, Iowa",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-145361722",
+        "business_name": "Dick Regional Armada Corp",
+        "business_address": "33466 Warwick Hills Road, Yucaipa, CA",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-120366543",
+          "business_name": "Dick Regional",
+          "business_address": "",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-939389287",
+          "business_name": "Dick Regional Armada",
+          "business_address": "33466 WARWICK HILLS ROAD, <NULL>, YUCAIPA, CA",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-96572514",
+          "business_name": "[Corp] Dick Regional Armada",
+          "business_address": "Yucaipa, California, 33466 Warwik Hills Road",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-818149988",
+        "business_name": "Vadyne Inc",
+        "business_address": "Greensboro, 1604 Washington Street, NC",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-489380965",
+          "business_name": "Vadyne Incorporated #34301",
+          "business_address": "1604 WASHINGTON STREET, GREENSBORO, NC",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-178277614",
+          "business_name": "Vadyne Inc",
+          "business_address": "1604 WASHINGTON STREET, GREENSBORO, NC",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-172270636",
+          "business_name": "Vadyne Inc",
+          "business_address": "1604 Washington St, GREENSBORO, NC",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-965578558",
+          "business_name": "Vagdyae Inc",
+          "business_address": "01604 Washington Street, PMB 841, Greensboro, North Carolina",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-102811957",
+        "business_name": "Payne Enterprises",
+        "business_address": "3315 Fremont Street, Peoria, IL",
+        "country": "US"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-478959098",
+          "business_name": "Payne Énterprises",
+          "business_address": "3315 FREMONT ST, PEORIA, IL",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-553508714",
+          "business_name": "Payne Enterpires",
+          "business_address": "3315 FREMONT ST, PEORIA, IL",
+          "country": "US"
+        },
+        {
+          "entity_id": "S2-625774905",
+          "business_name": "PAYNE-ENRTPRMISES",
+          "business_address": "3315 FREMONT SAINT, PEORIA, IL",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-728090388",
+          "business_name": "Payne Etrepndiels",
+          "business_address": "3315 Fremont St, Peoria, Illinois",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-928796641",
+          "business_name": "Payne Énterprises",
+          "business_address": "3315 Fremont Street, Peoria, Illinois",
+          "country": "US"
+        },
+        {
+          "entity_id": "S3-449308785",
+          "business_name": "Payne Enterprises  LLC",
+          "business_address": "Fremont St, Peoria, Illinois",
+          "country": "US"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-318373630",
+        "business_name": "Red Ventures Private Limited",
+        "business_address": "Rajasthan, Jaipur, Banipark, Gokul Apartment, E-3A Kanti Chandra Road, G-1",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-660036492",
+          "business_name": "रेड वेंचर्स प्राइवेट लिमिटेड",
+          "business_address": "G-1, BANIPARK, JAIPUR, Rajasthan",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-804600254",
+          "business_name": "Red Ventures Private",
+          "business_address": "Doro No 316 G-1, Gokul Apartment, E-3a Kanti Chandra Road, Banipark, Subhash Nagar, RJ",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-656753428",
+        "business_name": "Ss Food Private Limited",
+        "business_address": "Af-684, Nandgram Near Mother India Public School. Ph. 989, 9487203, Ghaziabad, Uttar Pradesh",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-153058913",
+          "business_name": "एसएस फूड प्राइवेट लिमिटेड",
+          "business_address": "AF-0684, NANDGRAM NEAR MOTHER INDIA PUBLIC SCHOOL. PH. 989, GHAZIABAD, 9487203, उत्तर प्रदेश",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-24659151",
+          "business_name": "एसएस फूड प्राइवेट लिमिटेड",
+          "business_address": "AF-0684, Uttar Pradesh, GHAZIABAD, 9487203",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-679606215",
+          "business_name": "एसएस फूड प्राइवेट लिमिटेड",
+          "business_address": "Af-684, Ghaziabad, UP",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-55344266",
+        "business_name": "Raj Investments LLP",
+        "business_address": "6(29), C.I.T. Colony, 2Nd Main Road Mylapore, Chennai, Tamil Nadu",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-249013014",
+          "business_name": "ராஜ் இன்வெஸ்ட்மெண்ட்ஸ் எல்எல்பி",
+          "business_address": "6(29), C.I.T. COLONY, 2ND MAIN ROAD MYLAPORE, CHENNAI, Tamil Nadu",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-197070651",
+          "business_name": "Raj Investments LLP",
+          "business_address": "6(29), C.I.T. COLONY, 2ND MAIN ROAD MYLAPORE, CHENNAI, Tamil Nadu",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-478195123",
+          "business_name": "Raj Investments எல்எல்பி",
+          "business_address": "6(29), C.i.t. Colony, 2Nd Main Road Mylapore, Chennai, TN",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-384364074",
+          "business_name": "ராஜ் இன்வெஸ்ட்மெண்ட்ஸ் எல்எல்பி",
+          "business_address": "6(29), C.i.t. Colony, 2Nd Main Road Mylapore, Chennai, தமிழ்நாடு",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-727602285",
+        "business_name": "Swastik Om Solutions LLP",
+        "business_address": "201/D, Aditya, Svp Nagar Andheri (W), Mumbai, Mumbai City, Maharashtra",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-976870196",
+          "business_name": "स्वस्तिक ॐ सॉल्यूशंस एलएलपी",
+          "business_address": "201/D, BHIWANDI, MUMBAI CITY, Maharashtra",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-947230367",
+          "business_name": "स्वस्तिक ॐ सॉल्यूशंस एलएलपी",
+          "business_address": "201/D, ADITYA, SVP NAGAR ANDHERI (W), BHIWANDI, MUMBAI CITY, Maharashtra",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-23141904",
+          "business_name": ">> SWASTIK OM SOLUTIONS L.L.P.",
+          "business_address": "201/D, BHIWANDI, BOMBAY, महाराष्ट्र",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-138660620",
+          "business_name": "[LLP] Swastik Om Solutions",
+          "business_address": "201/D, BHIWANDI, BOMBAY, Maharashtra",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-204655096",
+          "business_name": "Swastik Om LLP Service",
+          "business_address": "01/D, Mumbai City, महाराष्ट्र",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-561341312",
+        "business_name": "Balaji Investment Private Limited",
+        "business_address": "Plot No. D-88 & D-90, Hyd, Telangana, Hyderabad, Jeedimetla",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-483615364",
+          "business_name": "బాలాజీ ఇన్వెస్ట్‌మెంట్ ప్రైవేట్ లిమిటెడ్",
+          "business_address": "H.NO 00516 PLOT NO. D-88 & D-90, JEEDIMETLA, HYD, HYDERABAD, Telangana",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-619529814",
+          "business_name": "Balaji Insvstemnt Private Limited",
+          "business_address": "Plot No. D-88 & D-90, Hyd, Shapurnagar, TG",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-789009573",
+        "business_name": "Hotel Enterprises Limited",
+        "business_address": "Wz-187C Shop No.13, 14 Kh. No.47 S/F. Vikaspuri Budhela Village Behind Oxford School, Delhi, West Delhi, Delhi",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-383871912",
+          "business_name": "होटल एंटरप्राइजेज लिमिटेड",
+          "business_address": "WZ-187C SHOP NO.13, DELHI, WEST DELHI, Delhi",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-74481402",
+          "business_name": "Hotel Limited Services",
+          "business_address": "Block B-517 Wz-187c Shop No.13, Divreportingcircle, West Delhi, DL",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-576451439",
+          "business_name": "Hotel Énterprises Limited",
+          "business_address": "Block B-517 Wz-187c Shop No.13, South West Delhi, Delhi, DL",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "s1": {
+        "entity_id": "S1-7293388",
+        "business_name": "Chordia & Partners",
+        "business_address": "Faridabad, 1038 Sector 9, Haryana",
+        "country": "India"
+      },
+      "matches": [
+        {
+          "entity_id": "S2-7028416",
+          "business_name": "Chordia & Partners Company",
+          "business_address": "हरियाणा, 1038 SECTOR 9, FARIDABAD",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-442723188",
+          "business_name": "Chordia + Pagnters - 7306204978",
+          "business_address": "हरियाणा, DOOR NO 1038 SECTOR 9, FARIDABAD",
+          "country": "India"
+        },
+        {
+          "entity_id": "S2-157073701",
+          "business_name": "Chordia &-Pártners Ltd",
+          "business_address": "H.NO 1038 SECTOR 9, FARIABAD, Haryana",
+          "country": "India"
+        },
+        {
+          "entity_id": "S3-523120965",
+          "business_name": "Smt Chordia  & Center",
+          "business_address": "#1038 Sector 9, Faridabad, हरियाणा",
+          "country": "India"
+        }
+      ]
+    }
+  ]
+}

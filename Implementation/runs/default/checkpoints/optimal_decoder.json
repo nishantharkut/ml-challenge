@@ -1,0 +1,15 @@
+{
+  "prob_threshold": 0.75,
+  "use_query_exclusivity": true,
+  "val_macro_f05": 0.8891568200169981,
+  "val_entities_evaluated": 15000,
+  "total_pairs_scored": 375000,
+  "excl_on_result": {
+    "threshold": 0.75,
+    "score": 0.8891568200169981
+  },
+  "excl_off_result": {
+    "threshold": 0.75,
+    "score": 0.8890871230473012
+  }
+}

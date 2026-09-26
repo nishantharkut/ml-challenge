@@ -1,0 +1,6 @@
+{
+  "summary":  "Complete master strategy document for the Amazon ML Challenge 2026 - Business Entity Resolution. Covers:\n\n1. Problem analysis with verified EDA insights (24.2M records, cross-script matching, 5.58% singletons, F₀.₅ scoring math)\n2. 4-stage cascading pipeline architecture: Preprocessing → Multi-channel Blocking → Feature Engineering (50+ features) → LightGBM classifier → Precision-tuned decisions\n3. Critical cross-script transliteration strategy for Hindi/Tamil/Telugu using IndicXlit\n4. Multi-channel blocking (TF-IDF char n-grams + multilingual-e5 dense embeddings + phonetic) targeting ≥99% recall\n5. LightGBM pairwise classifier with hard negative mining and F₀.₅ threshold optimization\n6. France zero-shot strategy using language-agnostic features\n7. Singleton detection guardrails\n8. 5-phase experimentation roadmap (MVP → Cross-Script → Features → France → Ensemble)\n9. Computational resource planning (15GB RAM, CPU/GPU strategies)\n10. Risk mitigation matrix\n11. Software stack and expected performance targets (0.91+ F₀.₅)",
+  "updatedAt":  "2026-09-25T13:59:20.263742Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

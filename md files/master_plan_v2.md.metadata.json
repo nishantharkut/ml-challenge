@@ -1,0 +1,6 @@
+{
+  "summary": "Corrected and hardened master strategy for the Amazon ML Challenge 2026, incorporating critical findings from deep research that broke the original plan:\n\n1. TRANSLITERATION CRISIS: anyascii achieves only 0-50% token overlap with expected English for Indian scripts. Replaced with a 3-tier strategy: dictionary lookup for common terms (100% accuracy), indic-transliteration rule-based (fast, decent), and character n-gram fuzzy matching on raw scripts as fallback.\n2. PYTHON 3.14 RISK: torch/lightgbm/faiss may not have cp314 wheels. Added mandatory venv creation on Python 3.11/3.12 as first step.\n3. NFKD NORMALIZATION BUG: Stripping combining marks destroys Indic text. Fixed to only apply NFKD to Latin script.\n4. MEMORY CONSTRAINTS: TF-IDF on 5M docs with char_wb risks OOM. Added max_features=100K cap, float32, HashingVectorizer fallback.\n5. BGE-M3 SUPERIORITY: Switched primary embedding from multilingual-e5 to bge-m3 (hybrid dense+sparse+ColBERT).\n6. GLOBAL DISJOINT ASSIGNMENT: Confirmed as critical post-processing by competition research.\n7. Added S2-vs-S3 noise analysis, Indic script percentage breakdown, unmatched pool analysis.\n8. Added complete error/correction log showing every original assumption that was wrong.",
+  "updatedAt": "2026-09-25T14:31:14.678747100Z",
+  "requestFeedback": true,
+  "userFacing": true
+}

@@ -1,0 +1,42 @@
+# Ignore dataset files and zip archives
+dataset/
+*.zip
+*.tar
+*.tar.gz
+*.tsv
+*.csv
+*.parquet
+*.sqlite3*
+*.tmp*
+
+# Ignore huge training GT json splits
+train_gt_split.json
+**/train_gt_split.json
+
+# Ignore outputs, intermediates, and submissions
+output/
+**/output/
+intermediates/
+**/intermediates/
+submissions/
+**/submissions/
+
+# Ignore virtual environments, caches, and logs
+.venv/
+**/__pycache__/
+.pytest_cache/
+*.log
+
+# But explicitly keep small JSON checkpoints and model
+!Implementation/runs/default/checkpoints/lgbm_matcher.joblib
+!Implementation/runs/default/checkpoints/optimal_decoder.json
+!Implementation/runs/default/checkpoints/mined_dictionary.json
+!Implementation/runs/default/checkpoints/indic_translit_dict.json
+!Implementation/runs/default/checkpoints/val_s1_ids.json
+!Implementation/runs/default/checkpoints/val_gt_split.json
+!Implementation/runs/default/checkpoints/pareto_analysis.json
+!Implementation/runs/default/checkpoints/*manifest.json
+
+# Explicitly keep chat transcripts
+!transcripts/
+!transcripts/*.jsonl

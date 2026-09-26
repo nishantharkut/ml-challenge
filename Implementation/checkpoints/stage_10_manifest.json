@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "elapsed_seconds": 31.351712703704834,
+  "split_meta": {
+    "total_s1": 2206821,
+    "train_s1_count": 2156821,
+    "val_s1_count": 50000,
+    "random_seed": 42
+  },
+  "timestamp": "2026-09-25 23:44:16",
+  "completed": true
+}
